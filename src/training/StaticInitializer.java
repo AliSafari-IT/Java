@@ -6,7 +6,10 @@ import java.util.HashMap;
 public class StaticInitializer {
 public static ArrayList <Olive> oliveArrayList;
     static {
-        System.out.println("Static is run!");
+//        The code in the "static" section(s) will be executed at class load time, before any instances
+//        of the class are constructed (and before any static methods are called from elsewhere).
+//        That way you can make sure that the class resources are all ready to use.
+        System.out.println("Initializing... Static Initializer is run!");
         oliveArrayList = new ArrayList<>();
         oliveArrayList.add(new Olive("Kalamata", 0x000000));
         oliveArrayList.add(new Olive("Picholine", 0x00FF00));
